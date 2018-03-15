@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>DMU Social Site</title>
+  
+    <script src="lib/browser/neo4j-web.min.js"></script>
+</head>
+<body>
+<!--  LOGIN SCREEN-->
+  <section>
+  <span><form action="action_page.php">
+
+    <section class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked"> Remember me</label>
+    </section>
+
+    <section class="container" style="background-color:#f1f1f1">
+      Not got a account? <a href="#" onclick="document.getElementById('id01').style.display='block'">Register</a><br/>
+      Forgot <a href="#">password?</a>
+    </section>
+    </form></span>
+    <span>
+    
+    <section>
+      <img id = "loginLogo"src="De_Montfort_University_logo.svg.png">
+    </section></span>
+  </section>
+  
+  
+  
+  
+  <!--REGISTER FORM POP-UP-->
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="email" placeholder="Enter University Email" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Register</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>  
+
+</body>
+  
+  <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+</html>
